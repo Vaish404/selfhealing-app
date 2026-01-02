@@ -9,7 +9,7 @@ pipeline {
 
     stage('Checkout Code') {
       steps {
-        git 'https://github.com/Vaish404/selfhealing-app.git'
+        git branch: 'main', url: 'https://github.com/Vaish404/selfhealing-app.git'
       }
     }
 
@@ -41,3 +41,4 @@ pipeline {
     }
   }
 }
+
