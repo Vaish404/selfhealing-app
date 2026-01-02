@@ -9,7 +9,11 @@ pipeline {
 
     stage('Build React App') {
       steps {
-        sh 'cd frontend && npm install && npm run build'
+        sh '''
+          cd frontend
+          npm install
+          npm run build
+        '''
       }
     }
 
@@ -30,7 +34,7 @@ pipeline {
 
     stage('Deploy to Kubernetes') {
       steps {
-        sh "kubectl apply -f k8s-deployment.yaml"
+        sh 'kubectl --kubeconfig=/var/lib/jenkins/.kube/config apply -f k8s-deployment.yaml'
       }
     }
   }
