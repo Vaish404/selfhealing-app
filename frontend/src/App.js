@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="hero">
       <nav>
-        <h2 className="logo">CloudGuard</h2>
+        <h2 className="logo">ResilientCloud</h2>
         <button className="cta">Get Started</button>
       </nav>
 
