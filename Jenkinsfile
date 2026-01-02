@@ -7,12 +7,6 @@ pipeline {
 
   stages {
 
-    stage('Checkout Code') {
-      steps {
-        git branch: 'main', url: 'https://github.com/Vaish404/selfhealing-app.git'
-      }
-    }
-
     stage('Build React App') {
       steps {
         sh 'cd frontend && npm install && npm run build'
